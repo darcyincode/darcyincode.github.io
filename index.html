@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarcyInCode - 代码形式化与智能体研究</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 60px 0;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #4a5568;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .intro {
+            font-size: 1.1em;
+            text-align: center;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .research-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .research-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .research-card h3 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .research-card .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        .research-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .research-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .research-card li:before {
+            content: "▶";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+        }
+        
+        .research-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .skill-category h4 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+        
+        .contact-link .icon {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .research-areas {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DarcyInCode</h1>
+            <p>代码形式化与智能体研究专家</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="section">
+                <div class="intro">
+                    <p>欢迎来到我的个人主页！我专注于代码形式化验证和智能体系统的研究与开发，致力于构建更加可靠、智能的软件系统。通过形式化方法确保代码的正确性，同时探索智能体在软件工程中的创新应用。</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🔬 研究方向</h2>
+                <div class="research-areas">
+                    <div class="research-card">
+                        <h3><span class="icon">⚡</span>代码形式化验证</h3>
+                        <ul>
+                            <li>程序正确性验证与证明</li>
+                            <li>形式化规格说明建模</li>
+                            <li>模型检验与静态分析</li>
+                            <li>契约式编程方法</li>
+                            <li>类型系统设计与实现</li>
+                        </ul>
+                    </div>
+                    <div class="research-card">
+                        <h3><span class="icon">🤖</span>智能体系统</h3>
+                        <ul>
+                            <li>多智能体协调与通信</li>
+                            <li>智能体架构设计</li>
+                            <li>自主决策算法</li>
+                            <li>强化学习在智能体中的应用</li>
+                            <li>分布式智能体系统</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>💻 技术技能</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>形式化工具</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Coq</span>
+                            <span class="skill-tag">Isabelle/HOL</span>
+                            <span class="skill-tag">Dafny</span>
+                            <span class="skill-tag">TLA+</span>
+                            <span class="skill-tag">CBMC</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>编程语言</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Rust</span>
+                            <span class="skill-tag">OCaml</span>
+                            <span class="skill-tag">Haskell</span>
+                            <span class="skill-tag">C++</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI/ML框架</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">OpenAI Gym</span>
+                            <span class="skill-tag">Ray</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>开发工具</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Jupyter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎯 研究兴趣</h2>
+                <div class="intro">
+                    <p>我的研究兴趣集中在形式化方法与人工智能的交叉领域，特别关注如何将数学严谨性与智能系统的灵活性相结合。目前专注于开发可验证的智能体系统，探索形式化验证在AI安全性保障中的作用，以及智能体辅助的软件验证工具。</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📫 联系方式</h2>
+                <div class="contact-links">
+                    <a href="https://github.com/darcyincode" class="contact-link" target="_blank">
+                        <span class="icon">📂</span>GitHub
+                    </a>
+                    <a href="mailto:darcyincode@gmail.com" class="contact-link">
+                        <span class="icon">✉️</span>Email
+                    </a>
+                    <a href="https://scholar.google.com" class="contact-link" target="_blank">
+                        <span class="icon">🎓</span>Google Scholar
+                    </a>
+                    <a href="https://orcid.org" class="contact-link" target="_blank">
+                        <span class="icon">🔗</span>ORCID
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

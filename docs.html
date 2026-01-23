@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术文档 - DarcyInCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">DarcyInCode</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">首页</a>
+                    <a href="docs.html" class="nav-link active">技术文档</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container text-center">
+            <h1>技术文档</h1>
+            <p class="subtitle">分享代码形式化验证与智能体系统的技术见解</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- 分类筛选 -->
+        <div class="section">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">全部</button>
+                <button class="filter-tab" data-category="formal-verification">形式化验证</button>
+                <button class="filter-tab" data-category="ai-agents">智能体系统</button>
+                <button class="filter-tab" data-category="tools">工具使用</button>
+                <button class="filter-tab" data-category="research">研究心得</button>
+            </div>
+        </div>
+
+        <!-- 文章列表 -->
+        <div class="section">
+            <div class="articles-grid">
+                <!-- 示例文章 -->
+                <article class="article-card" data-category="formal-verification">
+                    <div class="article-meta">
+                        <span class="article-date">2026-01-20</span>
+                        <span class="tag tag-primary">形式化验证</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#" class="article-link">Coq中的归纳证明技巧与实践</a>
+                    </h3>
+                    <p class="article-excerpt">
+                        深入探讨在Coq证明助手中如何有效地构建归纳证明，包括常用策略和避免常见陷阱的方法。本文通过具体实例展示了归纳假设的正确使用方式。
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">Coq</span>
+                        <span class="tag">归纳证明</span>
+                        <span class="tag">定理证明</span>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="ai-agents">
+                    <div class="article-meta">
+                        <span class="article-date">2026-01-18</span>
+                        <span class="tag tag-primary">智能体系统</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#" class="article-link">多智能体强化学习中的协调机制设计</a>
+                    </h3>
+                    <p class="article-excerpt">
+                        分析多智能体环境下的协调问题，探讨不同的通信协议和奖励机制设计。重点讨论了去中心化训练与执行的策略。
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">多智能体</span>
+                        <span class="tag">强化学习</span>
+                        <span class="tag">协调机制</span>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="tools">
+                    <div class="article-meta">
+                        <span class="article-date">2026-01-15</span>
+                        <span class="tag tag-primary">工具使用</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#" class="article-link">TLA+规格说明语言入门指南</a>
+                    </h3>
+                    <p class="article-excerpt">
+                        TLA+是一种强大的形式化规格说明语言，本文介绍其基本语法、模型检验工具TLC的使用，以及如何在实际项目中应用TLA+进行系统设计验证。
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">TLA+</span>
+                        <span class="tag">模型检验</span>
+                        <span class="tag">规格说明</span>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="formal-verification">
+                    <div class="article-meta">
+                        <span class="article-date">2026-01-12</span>
+                        <span class="tag tag-primary">形式化验证</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#" class="article-link">Dafny中的循环不变式设计模式</a>
+                    </h3>
+                    <p class="article-excerpt">
+                        探讨在Dafny编程语言中如何设计有效的循环不变式，包括常见的设计模式、调试技巧，以及如何处理复杂数据结构的不变式。
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">Dafny</span>
+                        <span class="tag">循环不变式</span>
+                        <span class="tag">程序验证</span>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="research">
+                    <div class="article-meta">
+                        <span class="article-date">2026-01-10</span>
+                        <span class="tag tag-primary">研究心得</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#" class="article-link">形式化方法在AI安全中的应用前景</a>
+                    </h3>
+                    <p class="article-excerpt">
+                        分析当前AI系统安全性挑战，探讨形式化验证技术如何帮助构建更可靠的智能系统。讨论了相关研究方向和潜在的技术路线。
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">AI安全</span>
+                        <span class="tag">形式化方法</span>
+                        <span class="tag">研究展望</span>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="ai-agents">
+                    <div class="article-meta">
+                        <span class="article-date">2026-01-08</span>
+                        <span class="tag tag-primary">智能体系统</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#" class="article-link">基于Actor模型的分布式智能体架构</a>
+                    </h3>
+                    <p class="article-excerpt">
+                        介绍Actor模型在分布式智能体系统中的应用，包括消息传递机制、容错处理，以及如何实现高可扩展性的智能体集群。
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">Actor模型</span>
+                        <span class="tag">分布式系统</span>
+                        <span class="tag">可扩展性</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- 分页 -->
+        <div class="section">
+            <div class="pagination">
+                <button class="btn btn-outline" disabled>上一页</button>
+                <span class="pagination-info">第 1 页，共 1 页</span>
+                <button class="btn btn-outline" disabled>下一页</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 分类筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const articles = document.querySelectorAll('.article-card');
+
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // 更新活跃标签
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 筛选文章
+                    articles.forEach(article => {
+                        if (category === 'all' || article.dataset.category === category) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,42 +1,43 @@
-/* 开源风格全局配色方案 */
+/* 蓝色系全局配色方案 */
 :root {
-  /* 主要颜色 */
-  --primary-color: #0366d6;
-  --primary-light: #0969da;
-  --primary-dark: #0550ae;
+  /* 主要颜色 - 基于用户提供的配色 */
+  --primary-color: #1C4D8D;
+  --primary-light: #4988C4;
+  --primary-dark: #0F2854;
+  --accent-color: #8DE8F5;
   
   /* 背景颜色 */
   --bg-primary: #ffffff;
-  --bg-secondary: #f6f8fa;
-  --bg-tertiary: #f1f3f4;
-  --bg-accent: #e1f5fe;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-accent: #e0f2fe;
   
   /* 文字颜色 */
-  --text-primary: #24292f;
-  --text-secondary: #57606a;
-  --text-muted: #8b949e;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
   --text-inverse: #ffffff;
   
   /* 边框颜色 */
-  --border-color: #d1d9e0;
-  --border-light: #e1e4e8;
-  --border-muted: #f1f3f4;
+  --border-color: #cbd5e1;
+  --border-light: #e2e8f0;
+  --border-muted: #f1f5f9;
   
   /* 功能性颜色 */
-  --success-color: #28a745;
-  --warning-color: #ffc107;
-  --error-color: #dc3545;
-  --info-color: #17a2b8;
+  --success-color: #059669;
+  --warning-color: #d97706;
+  --error-color: #dc2626;
+  --info-color: #0284c7;
   
   /* 阴影 */
-  --shadow-sm: 0 1px 3px rgba(36, 41, 47, 0.12);
-  --shadow-md: 0 3px 6px rgba(36, 41, 47, 0.15);
-  --shadow-lg: 0 8px 24px rgba(36, 41, 47, 0.15);
+  --shadow-sm: 0 1px 3px rgba(15, 40, 84, 0.1);
+  --shadow-md: 0 4px 6px rgba(15, 40, 84, 0.1);
+  --shadow-lg: 0 10px 15px rgba(15, 40, 84, 0.1);
   
   /* 圆角 */
   --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
   
   /* 间距 */
   --spacing-xs: 4px;
@@ -151,15 +152,15 @@ body {
   background-color: var(--bg-secondary);
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   border: 1px solid var(--border-light);
 }
 
 .tag-primary {
-  background-color: var(--bg-accent);
-  color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: var(--accent-color);
+  color: var(--primary-dark);
+  border-color: var(--primary-light);
 }
 
 /* 页面布局样式 */
@@ -185,27 +186,19 @@ body {
 
 .intro {
   background-color: var(--bg-accent);
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: var(--spacing-xl);
   margin-bottom: var(--spacing-2xl);
-  border-left: 4px solid var(--primary-color);
 }
 
 .section-title {
-  display: flex;
-  align-items: center;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: var(--spacing-lg);
   color: var(--text-primary);
   border-bottom: 2px solid var(--border-light);
   padding-bottom: var(--spacing-sm);
-}
-
-.section-title .icon {
-  margin-right: var(--spacing-sm);
-  font-size: 1.5rem;
 }
 
 .grid {
@@ -234,13 +227,6 @@ body {
   font-weight: 600;
   margin-bottom: var(--spacing-md);
   color: var(--text-primary);
-  display: flex;
-  align-items: center;
-}
-
-.research-card .icon {
-  margin-right: var(--spacing-sm);
-  font-size: 1.2rem;
 }
 
 .research-list {

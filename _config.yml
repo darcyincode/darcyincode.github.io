@@ -56,10 +56,10 @@ plantuml:
   render: "PlantUMLServer"
   server: "https://www.plantuml.com/plantuml"
 # Home page setting
-index_generator:
-  path: ''
-  per_page: 10
-  order_by: -date
+# index_generator:
+#   path: ''
+#   per_page: 10
+#   order_by: -date
 
 # Category & Tag
 default_category: uncategorized

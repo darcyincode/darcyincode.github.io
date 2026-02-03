@@ -24,6 +24,6 @@ Remove-Item $postsPath -Recurse -Force
 
 # Restore symlink (requires admin)
 Write-Host "`nRestoring symlink..." -ForegroundColor Yellow
-Start-Process powershell -Verb RunAs -ArgumentList "-Command", "cd '$PWD'; New-Item -ItemType SymbolicLink -Path '$postsPath' -Target '$notesPath'; Read-Host 'Press Enter to close'" -Wait
+Start-Process powershell -Verb RunAs -ArgumentList "-Command", "cd '$PWD'; New-Item -ItemType SymbolicLink -Path '$postsPath' -Target '$notesPath'" -Wait
 
 Write-Host "`nDeployment complete!" -ForegroundColor Green

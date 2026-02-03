@@ -13,6 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 url: https://darcyincode.github.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

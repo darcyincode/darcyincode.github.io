@@ -43,13 +43,3 @@ Desktop.ini
 *.swo
 *~
 
-# 旧文件（可选删除）
-_posts/
-_layouts/
-_includes/
-articles/
-docs.html
-index.html
-build.py
-blog.md
-index.md

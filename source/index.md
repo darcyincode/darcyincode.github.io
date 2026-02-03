@@ -1,0 +1,56 @@
+---
+layout: false
+title: ""
+comments: false
+---
+
+<style>
+body {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+</style>
+
+<div style="text-align: center; padding: 50px 0 40px; border-bottom: 1px solid #e5e7eb;">
+  <p style="font-size: 0.95em; color: #6b7280; letter-spacing: 3px; font-family: 'Courier New', 'Fira Code', monospace; margin: 0;">研究爱好者 · 技术探索者 · 终身学习者</p>
+</div>
+
+<div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+
+<h2 style="font-family: 'Courier New', 'Fira Code', monospace; color: #d97706; font-size: 1.5em; margin: 50px 0 40px; letter-spacing: 2px; border-left: 3px solid #d97706; padding-left: 15px;">// 文章分类</h2>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 40px 0 60px;">
+
+<div style="border: 1px solid #fbbf24; background: transparent; padding: 0; transition: all 0.3s; position: relative;" onmouseover="this.style.borderColor='#d97706'; this.style.boxShadow='0 0 12px rgba(217,119,6,0.2)'" onmouseout="this.style.borderColor='#fbbf24'; this.style.boxShadow='none'">
+  <div style="padding: 25px;">
+    <h3 style="margin: 0 0 12px 0; color: #d97706; font-family: 'Courier New', monospace; font-size: 1.2em; font-weight: 600; letter-spacing: 1px;">【技术实践】</h3>
+    <p style="color: #4b5563; margin: 0 0 20px 0; line-height: 1.7; font-size: 0.9em; font-weight: 400;">编译器原理、程序语言设计、系统架构等硬核技术剖析</p>
+    <a href="/categories/tech-practice/" style="color: #d97706; text-decoration: none; font-weight: 500; font-family: monospace; border: 1px solid #d97706; padding: 6px 16px; display: inline-block; font-size: 0.85em; letter-spacing: 1px; transition: all 0.3s;" onmouseover="this.style.background='#d97706'; this.style.color='#ffffff'" onmouseout="this.style.background='transparent'; this.style.color='#d97706'">查看文章 →</a>
+  </div>
+</div>
+
+<div style="border: 1px solid #3b82f6; background: transparent; padding: 0; transition: all 0.3s; position: relative;" onmouseover="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 12px rgba(37,99,235,0.2)'" onmouseout="this.style.borderColor='#3b82f6'; this.style.boxShadow='none'">
+  <div style="padding: 25px;">
+    <h3 style="margin: 0 0 12px 0; color: #2563eb; font-family: 'Courier New', monospace; font-size: 1.2em; font-weight: 600; letter-spacing: 1px;">【科学研究】</h3>
+    <p style="color: #4b5563; margin: 0 0 20px 0; line-height: 1.7; font-size: 0.9em; font-weight: 400;">AI安全、多智能体系统等前沿研究</p>
+    <a href="/categories/research/" style="color: #2563eb; text-decoration: none; font-weight: 500; font-family: monospace; border: 1px solid #2563eb; padding: 6px 16px; display: inline-block; font-size: 0.85em; letter-spacing: 1px; transition: all 0.3s;" onmouseover="this.style.background='#2563eb'; this.style.color='#ffffff'" onmouseout="this.style.background='transparent'; this.style.color='#2563eb'">查看文章 →</a>
+  </div>
+</div>
+
+<div style="border: 1px solid #10b981; background: transparent; padding: 0; transition: all 0.3s; position: relative;" onmouseover="this.style.borderColor='#059669'; this.style.boxShadow='0 0 12px rgba(5,150,105,0.2)'" onmouseout="this.style.borderColor='#10b981'; this.style.boxShadow='none'">
+  <div style="padding: 25px;">
+    <h3 style="margin: 0 0 12px 0; color: #059669; font-family: 'Courier New', monospace; font-size: 1.2em; font-weight: 600; letter-spacing: 1px;">【架构解析】</h3>
+    <p style="color: #4b5563; margin: 0 0 20px 0; line-height: 1.7; font-size: 0.9em; font-weight: 400;">分布式系统与智能体架构设计</p>
+    <a href="/categories/architecture/" style="color: #059669; text-decoration: none; font-weight: 500; font-family: monospace; border: 1px solid #059669; padding: 6px 16px; display: inline-block; font-size: 0.85em; letter-spacing: 1px; transition: all 0.3s;" onmouseover="this.style.background='#059669'; this.style.color='#ffffff'" onmouseout="this.style.background='transparent'; this.style.color='#059669'">查看文章 →</a>
+  </div>
+</div>
+
+</div>
+
+<div style="text-align: center; margin: 50px 0; padding: 20px 0; border-top: 1px solid #e5e7eb;">
+  <p style="color: #6b7280; font-family: 'Courier New', monospace; font-size: 0.9em;">
+    <span style="color: #d97706;">&gt;</span> <a href="/archives/" style="color: #d97706; text-decoration: none; font-weight: 500; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">查看所有文章</a>
+  </p>
+</div>
+
+</div>

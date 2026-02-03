@@ -1,7 +1,7 @@
 # Hexo 博客 - .gitignore
 
-# 开发用符号链接（部署时会临时替换）
-source/_posts
+# 开发用符号链接已被真实文件替换，不再忽略
+# source/_posts
 
 # Hexo生成文件
 .deploy_git/

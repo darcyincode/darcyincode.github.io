@@ -4,26 +4,32 @@ $postsPath = "source\_posts"
 
 Write-Host "Starting deployment..." -ForegroundColor Cyan
 
-# Remove symlink
+# Remove junction/symlink
 if (Test-Path $postsPath) {
-    Remove-Item $postsPath -Recurse -Force
+    Write-Host "Removing existing junction..." -ForegroundColor Yellow
+    # 使用 cmd 命令删除 junction，避免递归删除目标目录
+    cmd /c "rmdir `"$postsPath`""
 }
 
 # Copy articles
 Write-Host "Copying articles..." -ForegroundColor Yellow
+New-Item -ItemType Directory -Path $postsPath -Force | Out-Null
 Copy-Item -Path "$notesPath\*" -Destination $postsPath -Recurse -Force
 
 # Commit and push
-Write-Host "Pushing to GitHub..." -ForegroundColor Yellow
+Write-Host "Committing changes..." -ForegroundColor Yellow
 git add .
 git commit -m "Update articles - $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
+
+Write-Host "Pushing to GitHub..." -ForegroundColor Green
 git push origin main
 
 # Remove copied files
+Write-Host "Cleaning up..." -ForegroundColor Yellow
 Remove-Item $postsPath -Recurse -Force
 
-# Restore symlink (requires admin)
-Write-Host "`nRestoring symlink..." -ForegroundColor Yellow
-Start-Process powershell -Verb RunAs -ArgumentList "-Command", "cd '$PWD'; New-Item -ItemType SymbolicLink -Path '$postsPath' -Target '$notesPath'" -Wait
+# Restore junction (不需要管理员权限)
+Write-Host "Restoring junction..." -ForegroundColor Yellow
+New-Item -ItemType Junction -Path $postsPath -Target $notesPath | Out-Null
 
-Write-Host "`nDeployment complete!" -ForegroundColor Green
+Write-Host "`nDeployment complete! Junction restored." -ForegroundColor Green

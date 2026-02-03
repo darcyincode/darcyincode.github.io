@@ -30,8 +30,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Check if hexo is installed
+        run: npx hexo version
+
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          echo "Build completed, checking files..."
+          find public -type f -name "*.html" | head -20
 
       - name: Add .nojekyll
         run: touch ./public/.nojekyll

@@ -36,10 +36,13 @@ jobs:
       - name: Add .nojekyll
         run: touch ./public/.nojekyll
 
+      - name: List public directory
+        run: ls -la ./public
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: public
 
       - name: Deploy to GitHub Pages
         id: deployment

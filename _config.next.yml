@@ -1,0 +1,27 @@
+# NexT Theme Custom Configuration
+# Override settings from node_modules/hexo-theme-next/_config.yml
+
+# Scheme - Choose a light theme
+scheme: Pisces
+
+# Dark Mode - Disable dark mode for light theme
+darkmode: false
+
+# Menu
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+  about: /about/ || fa fa-user
+
+# Sidebar Avatar
+avatar:
+  url: /images/avatar.png
+  rounded: true
+  rotated: false
+
+# Social Links
+social:
+  GitHub: https://github.com/darcyincode || fab fa-github
+  E-Mail: mailto:darcyincode@gmail.com || fa fa-envelope

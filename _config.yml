@@ -1,0 +1,95 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: DarcyInCode
+subtitle: '研究爱好者 · 技术探索者 · 终身学习者'
+description: '专注于代码形式化验证与智能体系统研究'
+keywords: 形式化验证, 智能体系统, Coq, Dafny, TLA+, 多智能体, 强化学习
+author: Darcy
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+# URL
+url: https://darcyincode.github.io
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :year-:month-:day-:title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace: '  '
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+plantuml:
+  render: "PlantUMLServer"
+  server: "https://www.plantuml.com/plantuml"
+# Home page setting
+index_generator:
+  path: 'blog'
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+  技术实践: tech-practice
+  科学研究: research
+  架构解析: architecture
+tag_map:
+
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: 'mtime'
+
+# Pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+
+# Deployment
+deploy:
+  type: git
+  repo: https://github.com/darcyincode/darcyincode.github.io.git
+  branch: gh-pages
+  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"

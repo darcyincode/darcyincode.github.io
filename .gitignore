@@ -1,0 +1,52 @@
+# Hexo 博客 - .gitignore
+
+# Hexo生成文件
+.deploy_git/
+public/
+.deploy*/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# 数据库
+db.json
+*.db
+
+# Jekyll旧文件
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 旧文件（可选删除）
+_posts/
+_layouts/
+_includes/
+articles/
+docs.html
+index.html
+build.py
+blog.md
+index.md

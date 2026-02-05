@@ -281,8 +281,8 @@ void function() {
 
 **适用场景**：
 - 小型、临时数据
-- 函数调用期间使用的缓冲区
-- 编译时大小已知的数组
+- 函数调用期间使用的临时数组
+- 编译时大小已知的数据结构
 
 **不适用场景**：
 - 大型数据（可能栈溢出）
@@ -506,7 +506,63 @@ free(ptr);
 - 每个`malloc/calloc`都要对应一个`free`
 - 只能释放堆上分配的内存
 
-> 💡 **详细的错误案例和安全问题**将在第四章"内存安全问题"中深入讨论。
+**缓冲区（Buffer）的概念**
+
+在实际编程中，我们经常看到这样的代码：
+
+```c
+char buffer[1024];           // 栈上的数组
+char *buf = malloc(1024);    // 堆上的数组
+```
+
+这些被称为**缓冲区（Buffer）**。缓冲区不是一种新的内存区域（它就是栈或堆上的数组），而是对数组**特定用途**的描述——用于**数据的临时中转**。
+
+**缓冲区的典型用途**：
+
+```c
+// 场景1：文件读取
+void read_file() {
+    char buffer[1024];  // 临时存放文件内容
+    FILE *fp = fopen("data.txt", "r");
+    while (fgets(buffer, sizeof(buffer), fp) != NULL) {
+        process_line(buffer);  // 数据流：文件 → buffer → 处理函数
+    }
+    fclose(fp);
+}
+
+// 场景2：网络通信
+void handle_request() {
+    char recv_buffer[4096];   // 接收数据的临时存储
+    recv(socket, recv_buffer, sizeof(recv_buffer), 0);
+    process_request(recv_buffer);
+}
+
+// 场景3：字符串格式化
+void log_message(const char *username) {
+    char buffer[256];  // 临时组装字符串
+    sprintf(buffer, "User: %s", username);
+    write_to_log(buffer);
+}
+```
+
+**缓冲区的特征**：
+1. **从数据源读取**（文件、网络、用户输入）
+2. **临时存储在内存**
+3. **传递给处理函数**
+4. **内容会被覆盖或丢弃**
+
+**对比：非缓冲区的数组**
+
+```c
+int scores[100];  // 这是数据存储，不是缓冲区
+scores[0] = 95;   // 数据会保留并反复访问
+```
+
+> 💡 **为什么要特别关注缓冲区？** 
+> 
+> 因为缓冲区通常存储**来自外部的、大小不确定的数据**（用户输入、文件内容、网络包），而缓冲区本身是**预分配的固定大小**。当外部数据超过缓冲区大小时，就会发生**缓冲区溢出（Buffer Overflow）**——这是C语言最危险的安全漏洞之一。详细内容将在第四章深入讨论。
+
+> 💡 **详细的内存安全问题和防御措施**将在第四章深入讨论。
 
 #### 数据段（Data Segment）与 BSS段（Block Started by Symbol）
 

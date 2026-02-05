@@ -1,0 +1,115 @@
+---
+layout: page
+title: 欢迎来到 DarcyInCode
+---
+
+<div style="text-align: center; padding: 40px 0 30px;">
+  <h1 style="font-size: 2.5em; margin-bottom: 10px;">DarcyInCode</h1>
+  <p style="font-size: 1.2em; color: #666;">研究爱好者 · 技术探索者 · 终身学习者</p>
+</div>
+
+---
+
+## 👋 关于我
+
+我是一名独立研究者，虽未踏入学院的殿堂，却对技术探索怀有满腔热忱。在这个技术日新月异的时代，我如同在茫茫大海中独自航行，没有灯塔的指引，只有内心对知识的渴望驱使着我前行。
+
+我在这里搭建了一片属于自己的净土，用以沉淀思考、记录成长。这里专注于**代码形式化验证**与**智能体系统**的研究，探索数学严谨性与智能系统的奇妙结合。
+
+---
+
+## 🔬 研究领域
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+
+<div style="padding: 20px; border: 1px solid #e1e4e8; border-radius: 6px;">
+
+### 代码形式化验证
+- 程序正确性验证与证明
+- 形式化规格说明建模
+- 模型检验与静态分析
+- 契约式编程方法
+- 类型系统设计与实现
+
+**相关文章**: [BishengC架构分析](/categories/架构解析/)
+
+</div>
+
+<div style="padding: 20px; border: 1px solid #e1e4e8; border-radius: 6px;">
+
+### 智能体系统与AI
+- 大语言模型(LLM)架构
+- Transformer与注意力机制
+- 深度学习基础理论
+- 神经网络数学原理
+- AI应用与实践
+
+**相关文章**: [AI学习笔记](/categories/)
+
+</div>
+
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+
+<div style="padding: 20px; border: 1px solid #e1e4e8; border-radius: 6px;">
+
+### 编译器与架构
+- LLVM基础架构研究
+- MLIR多级IR设计
+- 编译原理与优化
+- 程序分析技术
+
+**相关文章**: [LLVM系列](/tags/LLVM/)
+
+</div>
+
+<div style="padding: 20px; border: 1px solid #e1e4e8; border-radius: 6px;">
+
+### 编程语言设计
+- C语言安全性研究
+- Rust内存安全机制
+- BishengC语言分析
+- 类型系统对比
+
+**相关文章**: [语言对比分析](/tags/)
+
+</div>
+
+</div>
+
+---
+
+## 📚 知识库导航
+
+本站按照主题分类整理了大量技术文档，你可以通过以下方式浏览：
+
+- 📖 [全部文章](/archives/) - 按时间顺序查看所有文章
+- 📂 [分类浏览](/categories/) - 按主题分类查看
+- 🏷️ [标签索引](/tags/) - 按标签快速定位
+- 📝 [博客文章](/blog/) - 独立的博客内容
+
+---
+
+## 🎯 研究理念
+
+作为一名独立研究者，我深知这条路充满挑战——没有导师的指引，没有团队的支持，只有自己与技术的对话。但正是这种孤独，让我学会了独立思考，培养了坚韧的意志。
+
+我的研究聚焦于**形式化方法**与**人工智能**的交叉领域，探索如何将数学的严谨性与智能系统的灵活性相结合。每一次深入学习，都是对自己的超越；每一篇文档记录，都是思想的结晶。
+
+---
+
+## 📬 联系方式
+
+如果你也在技术的海洋中寻找方向，如果你也渴望与志同道合的人交流探讨，欢迎通过以下方式联系我：
+
+- 📧 Email: [darcyincode@gmail.com](mailto:darcyincode@gmail.com)
+- 💻 GitHub: [github.com/darcyincode](https://github.com/darcyincode)
+
+让我们一起在这条看似孤独却充满意义的道路上，互相鼓励，共同成长。
+
+---
+
+<div style="text-align: center; color: #888; margin-top: 40px;">
+  <p>💡 <em>"在知识的海洋中，我们都是永恒的学习者"</em></p>
+</div>

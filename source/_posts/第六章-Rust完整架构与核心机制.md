@@ -1,10 +1,16 @@
 ---
-
 title: Rust完整架构与核心机制
 date: 2026-02-06
-category: 技术实践
-tags: [Rust, 编译器, rustc, LLVM, 内存安全, IR]
-----------------------------------------
+categories:
+  - 安全语言
+tags:
+  - Rust
+  - 编译器
+  - rustc
+  - LLVM
+  - 内存安全
+  - IR
+---
 
 # Rust完整架构与核心机制
 

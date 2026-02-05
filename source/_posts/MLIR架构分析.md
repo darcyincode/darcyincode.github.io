@@ -1,8 +1,14 @@
 ---
 title: MLIR架构分析
 date: 2026-02-17
-category: 技术实践
-tags: [MLIR, LLVM, 编译器, 中间表示, IR]
+categories:
+  - 安全语言
+tags:
+  - MLIR
+  - LLVM
+  - 编译器
+  - 中间表示
+  - IR
 ---
 
 # MLIR架构分析

@@ -1,8 +1,8 @@
 # NexT Theme Custom Configuration
 # Override settings from node_modules/hexo-theme-next/_config.yml
 
-# Scheme - Choose a light theme
-scheme: Pisces
+# Scheme - 可选: Muse | Mist | Pisces | Gemini
+scheme: Gemini
 
 # Dark Mode - Disable dark mode for light theme
 darkmode: false
@@ -14,6 +14,18 @@ menu:
   categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags
   about: /about/ || fa fa-user
+  # 可选：添加文章归档链接
+  # docs: /blog/ || fa fa-book
+
+# Sidebar Settings
+sidebar:
+  position: left
+  display: always  # 始终显示侧边栏
+  padding: 18
+  offset: 12
+  sticky: true  # 固定侧边栏
+  # 显示侧边栏的时机
+  onmobile: false  # 移动端不显示
 
 # Sidebar Avatar
 avatar:
@@ -25,3 +37,81 @@ avatar:
 social:
   GitHub: https://github.com/darcyincode || fab fa-github
   E-Mail: mailto:darcyincode@gmail.com || fa fa-envelope
+
+# TOC (Table of Contents) in the Sidebar
+toc:
+  enable: true
+  number: true
+  wrap: false
+  expand_all: false
+  max_depth: 6
+
+# Creative Commons License
+creative_commons:
+  license: by-nc-sa
+  sidebar: false
+  post: true
+  language: deed.zh
+
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+
+# Post wordcount
+symbols_count_time:
+  separated_meta: true
+  item_text_total: false
+
+# Back to top
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+# Reading progress bar
+reading_progress:
+  enable: true
+  position: top
+  color: "#37c6c0"
+  height: 3px
+
+# Bookmark Support
+bookmark:
+  enable: true
+  color: "#222"
+  save: auto
+
+# GitHub Banner
+github_banner:
+  enable: true
+  permalink: https://github.com/darcyincode
+  title: Follow me on GitHub
+
+# Sidebar content
+site_state: true  # 显示站点统计信息
+
+# 侧边栏显示分类和标签
+links_settings:
+  icon: fa fa-globe
+  title: 站点导航
+  
+# 启用侧边栏目录树
+category_tree:
+  enable: true
+  
+# 标签云
+tagcloud:
+  min: 12
+  max: 30
+  amount: 200
+  orderby: name
+  order: 1
+
+# 自定义文件路径
+custom_file_path:
+  style: source/_data/styles.styl

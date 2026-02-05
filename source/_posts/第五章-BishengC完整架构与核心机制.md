@@ -1,8 +1,14 @@
 ---
 title: BishengC完整架构与核心机制
 date: 2026-02-05
-category: 技术实践
-tags: [BishengC, LLVM, 编译器, 内存安全, Clang]
+categories:
+  - 安全语言
+tags:
+  - BishengC
+  - LLVM
+  - 编译器
+  - 内存安全
+  - Clang
 ---
 
 # BishengC完整架构与核心机制

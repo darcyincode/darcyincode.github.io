@@ -1,8 +1,13 @@
 ---
 title: LLVM架构与优化技术
 date: 2026-02-14
-category: 技术实践
-tags: [LLVM, 编译优化, 循环优化, 向量化]
+categories:
+  - 安全语言
+tags:
+  - LLVM
+  - 编译优化
+  - 循环优化
+  - 向量化
 ---
 
 # LLVM架构与优化技术

@@ -1,8 +1,15 @@
 ---
 title: BishengC并发安全能力分析
 date: 2026-02-04
-category: 技术实践
-tags: [BishengC, 并发安全, RefCell, Rc, 内存安全, 数据竞争]
+categories:
+  - 安全语言
+tags:
+  - BishengC
+  - 并发安全
+  - RefCell
+  - Rc
+  - 内存安全
+  - 数据竞争
 ---
 
 # BishengC并发安全能力深度分析：从C的"无保护"到安全语言的"编译时+运行时"防护

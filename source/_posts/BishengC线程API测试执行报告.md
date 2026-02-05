@@ -1,3 +1,14 @@
+---
+title: BishengC Safe代码线程API限制测试报告
+date: 2026-02-04
+categories:
+  - 安全语言
+tags:
+  - BishengC
+  - 线程安全
+  - 并发编程
+---
+
 # BishengC Safe代码线程API限制测试报告
 
 **测试日期**: 2026-02-04  

@@ -8,7 +8,7 @@ tags:
   - 内存安全
   - LLVM
 categories:
-  - 技术实践
+  - 安全语言
 ---
 
 # BishengC与Rust的架构对比

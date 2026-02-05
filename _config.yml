@@ -57,7 +57,7 @@ plantuml:
   server: "https://www.plantuml.com/plantuml"
 # Home page setting - 使用自定义首页
 index_generator:
-  path: ''
+  path: 'blog'  # 文章列表移到 /blog/
   per_page: 10
   order_by: -date
 
@@ -86,7 +86,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: butterfly
 
 # Deployment
 deploy:

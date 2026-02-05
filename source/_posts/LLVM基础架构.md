@@ -1,8 +1,13 @@
 ---
 title: LLVM基础架构
 date: 2026-02-11
-category: 技术实践
-tags: [LLVM, 编译器, IR, 工具链]
+categories:
+  - 安全语言
+tags:
+  - LLVM
+  - 编译器
+  - IR
+  - 工具链
 ---
 
 # LLVM基础架构

@@ -1,0 +1,325 @@
+# Butterfly 主题配置
+
+# 导航菜单
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  关于: /about/ || fas fa-heart
+
+# 头像
+avatar:
+  img: /images/avatar.png
+  effect: true
+
+# 社交链接
+social:
+  fas fa-envelope: mailto:darcyincode@gmail.com || Email
+  fab fa-github: https://github.com/darcyincode || GitHub
+
+# 网站资讯
+site_info:
+  subtitle:
+    enable: true
+    text: 终身学习者 | 安全编程语言 | 大模型 | 智能体
+
+# 代码高亮主题
+highlight_theme: mac light
+
+# 代码复制
+highlight_copy: true
+
+# 主题色配置 - 黑白风格
+theme_color:
+  enable: true
+  main: "#333333"
+  paginator: "#333333"
+  button_hover: "#000000"
+  text_selection: "#333333"
+  link_color: "#333333"
+  meta_color: "#666666"
+  hr_color: "#e0e0e0"
+  code_foreground: "#000000"
+  code_background: "#f5f5f5"
+  toc_color: "#333333"
+  blockquote_padding_color: "#e0e0e0"
+  blockquote_background_color: "#f9f9f9"
+  scrollbar_color: "#999999"
+  meta_theme_color_light: "#ffffff"
+  meta_theme_color_dark: "#1a1a1a"
+
+# 自定义样式 - 黑白配色
+inject:
+  head:
+    - |
+      <style>
+      :root {
+        --global-bg: #ffffff;
+        --font-color: #2c2c2c;
+        --hr-border: #e0e0e0;
+        --card-bg: #ffffff;
+        --sidebar-bg: #fafafa;
+        --btn-bg: #333333;
+        --btn-color: #ffffff;
+        --link-color: #333333;
+        --link-hover-color: #000000;
+        --global-font-size: 16px;
+        --theme: #333333;
+      }
+      #page-header {
+        background: #2c2c2c !important;
+        background-image:
+          linear-gradient(90deg, rgba(180,230,0,0.85) 0%, rgba(180,230,0,0.85) 50%, rgba(109,56,150,0.85) 50%, rgba(109,56,150,0.85) 100%),
+          url('/images/header-bg.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-blend-mode: overlay !important;
+      }
+      #sidebar #sidebar-menus .site-data > a:hover {
+        color: #000000 !important;
+      }
+      .card-widget {
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+      
+      #aside-content .card-info #card-info-btn {
+        background-color:#B4E600 !important;
+      }
+      
+      a {
+        color: #333333;
+      }
+      a:hover {
+        color: #000000;
+      }
+      #pagination .page-number.current {
+        background: #333333;
+      }
+      
+      /* 分类页面改为简洁列表样式 */
+      .article-sort-item::before {
+        display: none !important;
+      }
+      .article-sort-item {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+      }
+      .article-sort {
+        margin-left: 0 !important;
+        border-left: none !important;
+      }
+      .article-sort-item-time {
+        display: inline-block !important;
+        position: static !important;
+        margin-right: 10px !important;
+        color: #999 !important;
+      }
+      
+      /* 导览链接荧光绿 */
+      #content-inner h3 a,
+      #content-inner strong a {
+        color: #6f42c1 !important;
+        font-weight: 600 !important;
+      }
+      #content-inner h3 a:hover,
+      #content-inner strong a:hover {
+        color: #9FE870 !important;
+      }
+      
+      /* 副标题荧光绿 - 首页副标题 */
+      #site-subtitle,
+      .site-subtitle,
+      #subtitle,
+      .subtitle,
+      #site-title + div,
+      .site-info .site-subtitle,
+      .scroll-down-effects,
+      #page-header #site-subtitle,
+      #page-header .scroll-down-effects {
+        color: #B4E600 !important;
+      }
+      /* 首页内容区域的副标题 */
+      #content-inner > h1 + p,
+      .index-content > p {
+        color: #B4E600 !important;
+        font-weight: 500 !important;
+      }
+      </style>
+
+# 侧边栏设置
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: 独立研究者，专注于安全编程语言、大模型与智能体系统研究
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/darcyincode
+  card_announcement:
+    enable: false
+  card_recent_post:
+    enable: false
+    limit: 5
+    sort: date
+  card_categories:
+    enable: true
+    limit: 8
+    expand: auto
+    sort_order: name
+  card_tags:
+    enable: false
+    limit: 40
+    color: false
+    sort_order: random
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+    sort_order:
+  card_webinfo:
+    enable: false
+    post_count: true
+    last_push_date: true
+    sort_order:
+
+# 目录设置
+toc:
+  post: true
+  page: true
+  number: true
+  expand: true
+  style_simple: false
+  scroll_percent: true
+
+# 复制设置
+copy:
+  enable: true
+  copyright:
+    enable: false
+
+# 页脚设置
+footer:
+  owner:
+    enable: true
+    since: 2026
+  custom_text: 
+  copyright: true
+
+# 阅读模式
+readmode: true
+
+# 夜间模式
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+# 文章元信息
+post_meta:
+  page:
+    date_type: both
+    date_format: relative
+    categories: true
+    tags: true
+    label: true
+  post:
+    date_type: both
+    date_format: relative
+    categories: true
+    tags: true
+    label: true
+
+# 文章版权
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# 相关文章推荐
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+# 分页设置
+pagination:
+  prev_text: '上一页'
+  next_text: '下一页'
+
+# 美化
+beautify:
+  enable: true
+  field: post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: '#000000'
+
+# 归档页面风格
+archive:
+  type: card  # 可选: timeline(时间线) | list(列表) | card(卡片)
+  
+# 分类页面风格  
+category:
+  type: card  # 可选: timeline(时间线) | list(列表) | card(卡片)
+
+# 全局字体
+font:
+  global-font-size: 
+  code-font-size:
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif
+  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", sans-serif
+
+# 网站验证
+site_verification:
+
+# 数学公式
+mathjax:
+  enable: false
+  per_page: false
+
+# 搜索
+local_search:
+  enable: false
+
+# 加载动画
+preloader:
+  enable: false
+
+# 图片懒加载  
+lazyload:
+  enable: true
+  field: site
+  placeholder:
+  blur: false
+
+# 背景效果
+canvas_ribbon:
+  enable: false
+
+# PWA
+pwa:
+  enable: false
+
+# 评论系统
+comments:
+  use: 
+  text: true
+  lazyload: false
+  count: false
+  card_post_count: false

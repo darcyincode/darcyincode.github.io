@@ -8,10 +8,8 @@ tags:
   - 内存安全
   - 指针安全
   - 空间安全
-  - 安全编程语言
-  - AI
 categories:
-  - tech-practice
+  - 安全语言
 ---
 
 ## 引言

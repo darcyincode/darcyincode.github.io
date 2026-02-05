@@ -1,8 +1,15 @@
 ---
 title: C语言安全问题与CWE映射
 date: 2026-02-04
-category: 技术实践
-tags: [C语言, 内存安全, CWE, 缓冲区溢出, UAF, 指针安全]
+categories:
+  - 安全语言
+tags:
+  - C语言
+  - 内存安全
+  - CWE
+  - 缓冲区溢出
+  - UAF
+  - 指针安全
 ---
 
 # C语言内存安全问题分类与CWE映射

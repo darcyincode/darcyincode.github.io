@@ -1,5 +1,5 @@
 ﻿# Deploy blog to GitHub
-$notesPath = "C:\Users\darcy\llvm-project\notes"
+$notesPath = "C:\Users\jike4\llvm-project\notes"
 $postsPath = "source\_posts"
 
 Write-Host "Starting deployment..." -ForegroundColor Cyan

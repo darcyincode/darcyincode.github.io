@@ -1,3 +1,18 @@
+
+---
+title: LSTM（长短期记忆网络）
+date: 2026-02-07
+order: 4
+categories:
+  - [大模型, 神经网络基础]
+tags:
+  - LSTM
+  - RNN
+  - 神经网络
+  - 深度学习
+  - 门控机制
+---
+
 # LSTM（长短期记忆网络）
 
 ## 什么是LSTM？

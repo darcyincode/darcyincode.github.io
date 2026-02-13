@@ -3,9 +3,9 @@
 # 导航菜单
 menu:
   首页: / || fas fa-home
+  安全语言: /kb.html?cat=安全语言 || fas fa-shield-halved
+  大模型: /kb.html?cat=大模型 || fas fa-brain
   归档: /archives/ || fas fa-archive
-  分类: /categories/ || fas fa-folder-open
-  标签: /tags/ || fas fa-tags
   关于: /about/ || fas fa-heart
 
 # 头像
@@ -62,8 +62,8 @@ inject:
         --sidebar-bg: #fafafa;
         --btn-bg: #333333;
         --btn-color: #ffffff;
-        --link-color: #333333;
-        --link-hover-color: #000000;
+        --link-color: #6D3896;
+        --link-hover-color: #5A2D7A;
         --global-font-size: 16px;
         --theme: #333333;
       }
@@ -85,18 +85,63 @@ inject:
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       }
       
-      #aside-content .card-info #card-info-btn {
+      #aside-content .card-info #card-info-btn
+      {
         background-color:#B4E600 !important;
       }
       
-      a {
-        color: #333333;
+      #aside-content #card-toc .toc-content .toc-link.active
+      {
+        background:#B4E600 !important;
       }
-      a:hover {
-        color: #000000;
+
+      .cover {
+        background: #123123 !important;
+      }
+      .container a,
+      #content-inner a,
+      .post-content a,
+      .article-content a,
+      #page-header a,
+      .recent-posts a {
+        color: var(--link-color) !important;
+      }
+      a:hover,
+      .container a:hover,
+      #content-inner a:hover,
+      .post-content a:hover,
+      .article-content a:hover,
+      #page-header a:hover,
+      .recent-posts a:hover {
+        color: var(--link-hover-color) !important;
       }
       #pagination .page-number.current {
         background: #333333;
+      }
+
+      /* 右侧浮动 TOC（由 JS 搬到 body 上） */
+      @media screen and (min-width: 1200px) {
+        #post {
+          margin-right: 280px !important;
+        }
+        #toc-right-float {
+          position: fixed;
+          right: 16px;
+          top: 80px;
+          width: 250px;
+          max-height: calc(100vh - 120px);
+          overflow-y: auto;
+          z-index: 99;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          padding: 16px;
+        }
+      }
+      @media screen and (max-width: 1199px) {
+        #toc-right-float {
+          display: none;
+        }
       }
       
       /* 分类页面改为简洁列表样式 */
@@ -129,6 +174,17 @@ inject:
         color: #9FE870 !important;
       }
       
+      /* 首页只隐藏分类、归档、TOC，保留个人卡片 */
+      .page #card-toc,
+      .page .card-categories,
+      .page .card-archives,
+      .page .card-recent-post,
+      .page .card-tag-cloud,
+      .page #toc-right-float,
+      .page #rightside {
+        display: none !important;
+      }
+      
       /* 副标题荧光绿 - 首页副标题 */
       #site-subtitle,
       .site-subtitle,
@@ -149,17 +205,39 @@ inject:
       }
       </style>
 
+  bottom:
+    - |
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var toc = document.getElementById('card-toc');
+        if (toc) {
+          var wrapper = document.createElement('div');
+          wrapper.id = 'toc-right-float';
+          wrapper.innerHTML = toc.innerHTML;
+          document.body.appendChild(wrapper);
+          toc.style.display = 'none';
+          // 同步高亮
+          var observer = new MutationObserver(function() {
+            wrapper.innerHTML = toc.innerHTML;
+          });
+          observer.observe(toc, { childList: true, subtree: true, attributes: true });
+        }
+      });
+      </script>
+
 # 侧边栏设置
 aside:
   enable: true
   hide: false
   button: true
   mobile: true
-  position: right
+  position: left
   display:
     archive: true
     tag: true
     category: true
+    post: true
+    page: true
   card_author:
     enable: true
     description: 独立研究者，专注于安全编程语言、大模型与智能体系统研究
@@ -176,8 +254,8 @@ aside:
     sort: date
   card_categories:
     enable: true
-    limit: 8
-    expand: auto
+    limit: 0
+    expand: true
     sort_order: name
   card_tags:
     enable: false
@@ -254,7 +332,7 @@ post_copyright:
 
 # 相关文章推荐
 related_post:
-  enable: true
+  enable: false
   limit: 6
   date_type: created
 
@@ -290,7 +368,7 @@ site_verification:
 
 # 数学公式
 mathjax:
-  enable: false
+  enable: true
   per_page: false
 
 # 搜索
